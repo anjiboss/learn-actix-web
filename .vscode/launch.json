@@ -1,0 +1,45 @@
+{
+	// Use IntelliSense to learn about possible attributes.
+	// Hover to view descriptions of existing attributes.
+	// For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+	"version": "0.2.0",
+	"configurations": [
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug executable 'rust-content-management-server'",
+			"cargo": {
+				"args": [
+					"build",
+					"--bin=rust-content-management-server",
+					"--package=rust-content-management-server"
+				],
+				"filter": {
+					"name": "rust-content-management-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		},
+		{
+			"type": "lldb",
+			"request": "launch",
+			"name": "Debug unit tests in executable 'rust-content-management-server'",
+			"cargo": {
+				"args": [
+					"test",
+					"--no-run",
+					"--bin=rust-content-management-server",
+					"--package=rust-content-management-server"
+				],
+				"filter": {
+					"name": "rust-content-management-server",
+					"kind": "bin"
+				}
+			},
+			"args": [],
+			"cwd": "${workspaceFolder}"
+		}
+	]
+}

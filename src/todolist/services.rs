@@ -26,7 +26,7 @@ async fn create_entry(
         date: pram_obj.date,
     });
 
-    println!("{}", pram_obj.title.clone());
+    println!("{:?}", pram_obj);
     HttpResponse::Ok().json(todolist_entries.to_vec())
 }
 
